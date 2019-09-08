@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Coming Soon</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style type="text/css">
+	</style>
+</head>
+<body>
+	<script type='text/javascript'>
+		do {
+			var toGetTo = window.prompt("What number would you like to get to to win?");
+		} while(/^\d+$/.test(toGetTo) == false);
+		
+		var numb = 0;
+		var turn = 0;
+		function start(){
+		    	document.getElementById("num").innerHTML = numb;
+			document.getElementById("num1").innerHTML = numb + 1;
+			document.getElementById("num2").innerHTML = numb + 2;
+		}
+		
+		function change1(){
+			if (numb < toGetTo){
+				numb = numb + 1;
+				document.getElementById("num").innerHTML = numb;
+				console.log(numb);
+				document.getElementById("num").innerHTML = numb;
+			    	document.getElementById("num1").innerHTML = numb + 1;
+			    	document.getElementById("num2").innerHTML = numb + 2;
+				turn += 1
+				if (!(numb < toGetTo)){
+					document.getElementById("winner").innerHTML = ("Player " + ((turn % 2) + 1) + " wins!")
+				}
+			}
+			
+		}	
+		
+		function change2(){
+			if (numb < toGetTo){
+				numb = numb + 2;
+				document.getElementById("num").innerHTML = numb;
+				console.log(numb);
+				document.getElementById("num").innerHTML = numb;
+			    	document.getElementById("num1").innerHTML = numb + 1;
+			    	document.getElementById("num2").innerHTML = numb + 2;
+				turn += 1
+				if (!(numb < toGetTo)){
+					document.getElementById("winner").innerHTML = ("Player " + ((turn % 2) + 1) + " wins!")
+				}
+			}
+		}													
+		//ai
+		/*
+		aiNums = [];
+		for(i = 0; i < Math.floor(toGetTo / 3) + 1; i++){
+			aiNums.push(toGetTo - 3 * i);
+		}
+		if (aiNums[aiNums.length - 1] == 0) {
+			aiNums.splice(aiNums.length - 1, 1)
+		}
+		console.log(aiNums)
+		*/
+	</script>
+	<h1 id="num" onclick="start()" align="center">Start</h1>
+	<div style="text-align: left;"><button id="num1" onclick="change1()">Start</button></div>
+	<div style="text-align: right;"><button id="num2" onclick="change2()">Start</button></div>
+	<p id="winner"></p>
+</body>
+</html>
