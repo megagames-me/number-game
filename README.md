@@ -1,5 +1,10 @@
 # number-game
-We are finished coding this game and now we are focusing on Mining, Inc. Also we would be VERY happy if someone adds CSS because it looks **cough** ugly **cough**.
-# CSS UPDATE BY Fryinggg Pannnn:
+Now we just want.. FEATURES!!!!!!!!!!!!
+# STYLE UPDATE BY Fryinggg Pannnn:
 It looks way better.
 Changed font
+# TEXT UPDATE BY Fryinggg Pannnn and megagames-me:
+Added lots and lots of text like how to play.
+Added G and H for add 1 and 2 respectively.
+
+
